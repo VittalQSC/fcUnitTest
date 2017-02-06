@@ -1,0 +1,10 @@
+<li>
+	<h1>{{$ctrl.article.title}}</h1>
+	<div>{{$ctrl.article.text}}</div>
+	<strong>{{$ctrl.article.author}}</strong>
+	<div>
+		<small>{{$ctrl.article.createDate}}</small>
+	</div>
+	<button ng-click="remove($ctrl.article)">Delete</button>
+	<div>----</div>
+</li>

@@ -1,0 +1,19 @@
+<form name="myForm" class="simple-form" ng-submit="create(newArticle)">
+   <label>Title: <input type="title" ng-model="newArticle.title" required /></label><br />
+   <label>Text: 
+   	
+   		<input type="text" name="text" ng-model="newArticle.text" my-validator required />
+   </label>
+   	<br />
+   <label>Author: <input type="author" ng-model="newArticle.author" /></label><br />
+   <label>Creation Date: <input type="createDate" ng-model="newArticle.createDate" /></label><br />
+   
+   <div ng-show="myForm.text.$error.customValidator">
+   		length >= 20
+   </div>
+
+   <input type="button" ng-click="reset()" value="Reset" />
+   <button type="submit" 
+   ng-disabled="myForm.$invalid" 
+   value="Save">Add an article</button>
+</form>

@@ -1,0 +1,7 @@
+div 
+  div= article.author
+  div= article.title
+  div= article.text
+  a(href="update/#{article._id}")= "update"
+  br
+  a(href="remove/#{article._id}")= "remove"

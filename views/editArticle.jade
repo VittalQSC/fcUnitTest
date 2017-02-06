@@ -1,0 +1,8 @@
+form(action='/articles/updated/#{article._id}',method='get')
+  label(for='title') #{article.title}
+  input(id='title',type='text', name="title")
+  label(for='author') #{article.author}
+  input(id='author',type='text', name="author")  
+  label(for='text') #{article.text}
+  input(id='text',type='text', name="text")   
+  input(type='submit',value='Update article')  

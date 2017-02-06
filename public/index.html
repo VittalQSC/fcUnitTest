@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>AngularJS App</title>
+
+	<!-- SPELLS -->
+	<script src="bower_components/angular/angular.js">
+	</script>
+	<!-- load angular -->
+
+	<script type="text/javascript" src="/controllers/form.controller/form.module.js">	
+	</script>
+
+	<script type="text/javascript" src="/controllers/article.controller/article.module.js">	
+	</script>
+	
+	<script type="text/javascript" src="/controllers/articles.controller/articles.module.js">
+	</script>
+
+	<script type="text/javascript">
+	var app = angular.module('app', ['formModule', 'articles'])
+
+	app.controller("MyCtrl", function () {});
+
+	</script>
+
+</head>
+<body>
+
+	<div style="padding-top: 50px"></div>
+	
+	<article-form></article-form>
+	
+	<div ng-controller="ArticlesCtrl as asc">
+		{{ar}}
+	
+		<div style="padding-top: 50px"></div>
+
+		<articles-list articles="articles"></articles-list>		
+	</div>
+	<div style="padding-top: 50px"></div>
+
+</body>
+</html>
